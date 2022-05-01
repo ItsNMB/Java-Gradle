@@ -1,0 +1,37 @@
+{
+    "folders":
+    [
+        {
+            "path": "app",
+            "follow_symlinks": true
+        },
+        {
+            "name": "Gradle Files",
+            "path": ".",
+            "follow_symlinks": true,
+            "file_include_patterns": ["*.gradle"],
+            "folder_exclude_patterns": ["*"],
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 4
+    },
+    "build_systems":
+    [
+        {
+            "name": "Gradle",
+            "shell_cmd": "cd $project_path && gradlew run",
+            "shell": true,
+
+            "variants": [
+
+                {
+                    "name": "DEBUG",
+                    "shell_cmd": "echo Project: $project && echo Folder: $project_path && echo Name: $project_name",
+                    "shell": true
+                }
+            ]
+        } 
+    ]
+}
